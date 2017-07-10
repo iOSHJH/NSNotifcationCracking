@@ -25,6 +25,14 @@
 //    [self testWithCrackNotification2];
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [super touchesBegan:touches withEvent:event];
+    
+    NSNotification *notification = [NSNotification notificationWithName:@"ThreeViewControllerNotificationName" object:nil];
+    NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
+    [notificationCenter postNotification:notification];
+}
+
 - (IBAction)buttonPressed:(id)sender {
     SecondViewController *secondVC = [[SecondViewController alloc] init];
     [self.navigationController pushViewController:secondVC animated:YES];

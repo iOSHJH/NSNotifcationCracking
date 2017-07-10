@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F4947041F13175B00AB4051 /* ThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4947031F13175B00AB4051 /* ThreeViewController.m */; };
 		8EA16B111CCB103F00B15E0A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA16B101CCB103F00B15E0A /* main.m */; };
 		8EA16B141CCB103F00B15E0A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA16B131CCB103F00B15E0A /* AppDelegate.m */; };
 		8EA16B171CCB103F00B15E0A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA16B161CCB103F00B15E0A /* ViewController.m */; };
@@ -38,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7F4947021F13175B00AB4051 /* ThreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreeViewController.h; sourceTree = "<group>"; };
+		7F4947031F13175B00AB4051 /* ThreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreeViewController.m; sourceTree = "<group>"; };
 		8EA16B0C1CCB103E00B15E0A /* NSNotifcationCracking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSNotifcationCracking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EA16B101CCB103F00B15E0A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8EA16B121CCB103F00B15E0A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -116,6 +119,8 @@
 				8EA16B161CCB103F00B15E0A /* ViewController.m */,
 				8EA16B4C1CCB1B6800B15E0A /* SecondViewController.h */,
 				8EA16B4D1CCB1B6800B15E0A /* SecondViewController.m */,
+				7F4947021F13175B00AB4051 /* ThreeViewController.h */,
+				7F4947031F13175B00AB4051 /* ThreeViewController.m */,
 				8EA16B511CCB20E600B15E0A /* HHNotification.h */,
 				8EA16B521CCB20E600B15E0A /* HHNotification.m */,
 				8EA16B541CCB20F900B15E0A /* HHNotificationCenter.h */,
@@ -286,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EA16B4F1CCB1B6800B15E0A /* SecondViewController.m in Sources */,
+				7F4947041F13175B00AB4051 /* ThreeViewController.m in Sources */,
 				8EA16B171CCB103F00B15E0A /* ViewController.m in Sources */,
 				8EA16B531CCB20E600B15E0A /* HHNotification.m in Sources */,
 				8EA16B561CCB20F900B15E0A /* HHNotificationCenter.m in Sources */,
@@ -514,6 +520,7 @@
 				8EA16B3B1CCB103F00B15E0A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8EA16B3C1CCB103F00B15E0A /* Build configuration list for PBXNativeTarget "NSNotifcationCrackingTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +529,7 @@
 				8EA16B3E1CCB103F00B15E0A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8EA16B3F1CCB103F00B15E0A /* Build configuration list for PBXNativeTarget "NSNotifcationCrackingUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +538,7 @@
 				8EA16B411CCB103F00B15E0A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -8,6 +8,7 @@
 
 #import "SecondViewController.h"
 #import "HHNotificationCenter.h"
+#import "ThreeViewController.h"
 
 @interface SecondViewController ()
 
@@ -22,6 +23,20 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     [self setupSubViews];
+    
+    NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
+    [notificationCenter addObserver:self selector:@selector(go:) name:@"ThreeViewControllerNotificationName" object:nil];
+}
+
+- (void)dealloc {
+
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [super touchesBegan:touches withEvent:event];
+    
+    ThreeViewController *vc = [ThreeViewController new];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)setupSubViews
@@ -35,6 +50,12 @@
     [self.backButton setTitle:@"返回" forState:UIControlStateNormal];
     [self.backButton addTarget:self action:@selector(backButtonPressed) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.backButton];
+    
+//    self.backButton = [UIButton buttonWithType:UIButtonTypeSystem];
+//    self.backButton.frame = CGRectMake(100, 200, 80, 50);
+//    [self.backButton setTitle:@"返回" forState:UIControlStateNormal];
+//    [self.backButton addTarget:self action:@selector(backButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+//    [self.view addSubview:self.backButton];
 }
 
 - (void)backButtonPressed
@@ -54,4 +75,11 @@
 //    [notificationCenter postNotificationName:@"TextFieldValueChanged" object:self.textField userInfo:nil];
     [self.navigationController popViewControllerAnimated:YES];
 }
+
+- (void)go:(NSNotification *)notification {
+    NSLog(@"go go go");
+}
+
+
+
 @end
