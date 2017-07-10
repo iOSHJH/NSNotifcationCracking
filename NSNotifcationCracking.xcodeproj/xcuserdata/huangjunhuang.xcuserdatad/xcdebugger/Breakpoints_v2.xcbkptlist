@@ -25,13 +25,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "NSNotifcationCracking/SecondViewController.m"
-            timestampString = "521346592.724233"
+            filePath = "NSNotifcationCracking/ViewController.m"
+            timestampString = "521364137.03561"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "-dealloc"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "-foo2:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NSNotifcationCracking/ViewController.m"
+            timestampString = "521364138.811848"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "-foo1:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

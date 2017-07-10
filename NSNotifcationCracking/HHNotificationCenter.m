@@ -71,19 +71,24 @@ typedef void(^OperationBlock)(HHNotification *notification);
 {
     [self.observers enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         HHObserverModel *observerModel = obj;
-        id observer = observerModel.observer;
-        SEL selector = observerModel.selector;
-        if (!observerModel.operationQueue) {
+        
+        NSString *name = observerModel.notificationName;
+        if ([name isEqualToString:notification.name]) { // 判断观察者名字 和 发送通知名 是否相同
+            
+            id observer = observerModel.observer;
+            SEL selector = observerModel.selector;
+            if (!observerModel.operationQueue) {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
-            [observer performSelector:selector withObject:notification];
+                [observer performSelector:selector withObject:notification];
 #pragma clang diagnostic pop
-        } else {
-            NSBlockOperation *operation = [NSBlockOperation blockOperationWithBlock:^{
-                observerModel.block(notification);
-            }];
-            NSOperationQueue *operationQueue = observerModel.operationQueue;
-            [operationQueue addOperation:operation];
+            } else {
+                NSBlockOperation *operation = [NSBlockOperation blockOperationWithBlock:^{
+                    observerModel.block(notification);
+                }];
+                NSOperationQueue *operationQueue = observerModel.operationQueue;
+                [operationQueue addOperation:operation];
+            }
         }
     }];
 }

@@ -61,14 +61,14 @@
 - (void)backButtonPressed
 {
     //test1
-    NSNotification *notification = [NSNotification notificationWithName:@"TextFieldValueChanged" object:self.textField];
-    NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
-    [notificationCenter postNotification:notification];
+//    NSNotification *notification = [NSNotification notificationWithName:@"TextFieldValueChanged" object:self.textField];
+//    NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
+//    [notificationCenter postNotification:notification];
     
     //test2
-//    HHNotification *notification = [HHNotification notificationWithName:@"TextFieldValueChanged" object:self.textField];
-//    HHNotificationCenter *notificationCenter = [HHNotificationCenter defaultCenter];
-//    [notificationCenter postNotification:notification];
+    HHNotification *notification = [HHNotification notificationWithName:@"TextFieldValueChanged" object:self.textField];
+    HHNotificationCenter *notificationCenter = [HHNotificationCenter defaultCenter];
+    [notificationCenter postNotification:notification];
     
     //test3
 //    HHNotificationCenter *notificationCenter = [HHNotificationCenter defaultCenter];

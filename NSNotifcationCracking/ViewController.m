@@ -20,8 +20,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self testWithNSNotification];
-//    [self testWithCrackNotification1];
+//    [self testWithNSNotification];
+    [self testWithCrackNotification1];
 //    [self testWithCrackNotification2];
 }
 
@@ -48,6 +48,8 @@
 {
     HHNotificationCenter *notificationCenter = [HHNotificationCenter defaultCenter];
     [notificationCenter addObserver:self selector:@selector(foo1:) name:@"TextFieldValueChanged" object:nil];
+    
+    [notificationCenter addObserver:self selector:@selector(foo2:) name:@"TextFieldValueChanged2" object:nil];
 }
 
 - (void)testWithCrackNotification2
@@ -77,6 +79,15 @@
         self.label.text = textField.text;
     }
 }
+
+- (void)foo2:(HHNotification *)notification
+{
+    if ([notification.name isEqualToString:@"TextFieldValueChanged2"]) {
+        UITextField *textField = notification.object;
+        self.label.text = textField.text;
+    }
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
